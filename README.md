@@ -21,10 +21,6 @@ A cutting-edge **IoT-based Smart Irrigation System** designed to optimize water 
 - **Flask**: For API development.
 - **MongoDB**: Database to store sensor data and user preferences.
 
-### Frontend:
-- **Next.js**: For building a responsive web dashboard.
-- **Tailwind CSS**: For styling the user interface.
-
 ### Additional Tools:
 - **Weather API**: For real-time weather forecasting.
 - **Soil Moisture Sensors**: To measure soil conditions.
