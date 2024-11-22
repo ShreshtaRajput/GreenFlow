@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>GreenFlow</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <link
+      href="{{ url_for('static', filename='img/favicon.png') }}"
+      rel="icon"
+    />
+    <link
+      href="{{ url_for('static', filename='img/apple-touch-icon.png') }}"
+      rel="apple-touch-icon"
+    />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}"
+      rel="stylesheet"
+    />
+    <link
+      href="{{ url_for('static', filename='vendor/bootstrap-icons/bootstrap-icons.css') }}"
+      rel="stylesheet"
+    />
+    <link
+      href="{{ url_for('static', filename='vendor/aos/aos.css') }}"
+      rel="stylesheet"
+    />
+    <link
+      href="{{ url_for('static', filename='vendor/glightbox/css/glightbox.min.css') }}"
+      rel="stylesheet"
+    />
+    <link
+      href="{{ url_for('static', filename='vendor/swiper/swiper-bundle.min.css') }}"
+      rel="stylesheet"
+    />
+    <link
+      href="{{ url_for('static', filename='css/main.css') }}"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="index-page">
+    <header id="header" class="header fixed-top">
+      <div class="branding d-flex align-items-center">
+        <!-- Corrected class name from "align-items-cente" to "align-items-center" -->
+        <div
+          class="container position-relative d-flex align-items-center justify-content-between"
+        >
+          <a
+            href="{{ url_for('home') }}"
+            class="logo d-flex align-items-center"
+          >
+            <!-- Changed to use url_for -->
+            <h1 class="sitename">GreenFlow</h1>
+            <span>.</span>
+          </a>
+
+          <nav id="navmenu" class="navmenu">
+            <ul>
+              <li>
+                <a href="#hero" class="active">Home<br /></a>
+              </li>
+              <li><a href="#about">About</a></li>
+              <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#team">Team</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <!-- Hero Section -->
+      <section id="hero" class="hero section accent-background">
+        <div
+          class="container position-relative"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <div class="row gy-5 justify-content-between">
+            <div
+              class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center"
+            >
+              <h2>
+                <span>Welcome to </span><span class="accent">GreenFlow</span>
+              </h2>
+              <div class="d-flex">
+                <a href="#about" class="btn-get-started">Get Started</a>
+                <a
+                  href="https://www.youtube.com/watch?v=Y7f98aduVJ8"
+                  class="glightbox btn-watch-video d-flex align-items-center"
+                >
+                  <i class="bi bi-play-circle"></i><span>Watch Video</span>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-5 order-1 order-lg-2">
+              <img
+                src="{{ url_for('static', filename='img/hero-img.svg') }}"
+                class="img-fluid"
+                alt=""
+              />
+              <!-- Changed to use url_for -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Hero Section -->
+
+      <!-- About Section -->
+      <section id="about" class="about section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>About Us<br /></h2>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container">
+          <div class="row gy-4">
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+              <h3>Welcome to GreenFlow</h3>
+              <p>
+                GreenFlow is a cutting-edge solution for smart irrigation,
+                designed to help farmers and gardeners efficiently manage water
+                resources. Our platform integrates the latest IoT technology
+                with real-time weather and soil moisture data, enabling precise
+                and eco-friendly irrigation strategies. We aim to support
+                sustainable agriculture by providing tools that optimize water
+                usage, enhance crop growth, and reduce waste.
+              </p>
+              <p>
+                At GreenFlow, we believe in harnessing technology to make
+                agriculture smarter, more sustainable, and accessible to
+                everyone. Whether you're a small-scale gardener or managing
+                large agricultural fields, our easy-to-use platform ensures your
+                plants receive the right amount of water, when they need it the
+                most.
+              </p>
+            </div>
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="250">
+              <div class="content ps-0 ps-lg-5">
+                <ul>
+                  <li>
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span
+                      >Allows users to set up and control irrigation for
+                      different areas or crops.</span
+                    >
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span
+                      >Adjusts watering based on current and forecasted weather
+                      conditions.</span
+                    >
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span
+                      >Provides analytics on water usage, soil conditions, and
+                      plant health for smarter decision-making.</span
+                    >
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span
+                      >Simple interface to manage irrigation systems with ease,
+                      whether for home gardens or large farms.</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /About Section -->
+
+      <!-- Call To Action Section -->
+      <section
+        id="call-to-action"
+        class="call-to-action section dark-background"
+      >
+        <div class="container">
+          <img
+            src="{{ url_for('static', filename='img/cta-bg.jpg') }}"
+            alt=""
+          />
+          <!-- Changed to use url_for -->
+          <div
+            class="content row justify-content-center"
+            data-aos="zoom-in"
+            data-aos-delay="100"
+          >
+            <div class="col-xl-10">
+              <div class="text-center">
+                <a
+                  href="https://www.youtube.com/watch?v=Y7f98aduVJ8"
+                  class="glightbox play-btn"
+                ></a>
+                <h3>Call To Action</h3>
+                <p>
+                  Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                  occaecat cupidatat non proident, sunt in culpa qui officia
+                  deserunt mollit anim id est laborum.
+                </p>
+                <a class="cta-btn" href="#">Call To Action</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Call To Action Section -->
+
+      <!-- Services Section -->
+      <section id="services" class="services section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Our Services</h2>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container">
+          <div class="row gy-4">
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="service-item position-relative">
+                <div class="icon">
+                  <i class="bi bi-activity"></i>
+                </div>
+                <h3>Dashboard</h3>
+                <p>Access all our services</p>
+                <a
+                  href="{{ url_for('dashboard') }}"
+                  class="readmore stretched-link"
+                >
+                  Read more <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <!-- End Service Item -->
+          </div>
+        </div>
+      </section>
+      <!-- /Services Section -->
+
+      <!-- Team Section -->
+      <section id="team" class="team section">
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Our Team</h2>
+        </div>
+
+        <div class="container">
+          <div class="row gy-4">
+            <div
+              class="col-xl-3 col-md-6 d-flex"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="member">
+                <img
+                  src="{{ url_for('static', filename='img/team/team-4.jpg') }}"
+                  class="img-fluid"
+                  alt="Shreshta Rajput"
+                />
+                <h4>Shreshta Rajput</h4>
+                <span>Developer</span>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-xl-3 col-md-6 d-flex"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="member">
+                <img
+                  src="{{ url_for('static', filename='img/team/team-4.jpg') }}"
+                  class="img-fluid"
+                  alt="Shreyas Tiwari"
+                />
+                <h4>Shreyas Tiwari</h4>
+                <span>Developer</span>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-xl-3 col-md-6 d-flex"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="member">
+                <img
+                  src="{{ url_for('static', filename='img/team/team-4.jpg') }}"
+                  class="img-fluid"
+                  alt="Daksh Gakhar"
+                />
+                <h4>Swapnil Bhardwaj</h4>
+                <span>Developer</span>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-xl-3 col-md-6 d-flex"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <div class="member">
+                <img
+                  src="{{ url_for('static', filename='img/team/team-4.jpg') }}"
+                  class="img-fluid"
+                  alt="Vishal Halder"
+                />
+                <h4>Siddhaarth Sharma</h4>
+                <span>Developer</span>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Team Section -->
+
+      <!-- Pricing Section -->
+      <section id="pricing" class="pricing section">
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Pricing</h2>
+        </div>
+
+        <div class="container" data-aos="zoom-in" data-aos-delay="100">
+          <div class="row g-4">
+            <div class="col-lg-4">
+              <div class="pricing-item">
+                <h3>Free Plan</h3>
+                <div class="icon">
+                  <i class="bi bi-box"></i>
+                </div>
+                <h4><sup>$</sup>0<span> / month</span></h4>
+                <ul>
+                  <li>
+                    <i class="bi bi-check"></i> Quam adipiscing vitae proin
+                  </li>
+                  <li><i class="bi bi-check"></i> Nec feugiat nisl pretium</li>
+                  <li>
+                    <i class="bi bi-check"></i> Nulla at volutpat diam uteera
+                  </li>
+                  <li class="na">
+                    <i class="bi bi-x"></i> Pharetra massa massa ultricies
+                  </li>
+                  <li class="na">
+                    <i class="bi bi-x"></i> Massa ultricies mi quis hendrerit
+                  </li>
+                </ul>
+                <div class="text-center">
+                  <a href="#" class="buy-btn">Buy Now</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="pricing-item featured">
+                <h3>Business Plan</h3>
+                <div class="icon">
+                  <i class="bi bi-rocket"></i>
+                </div>
+                <h4><sup>$</sup>29<span> / month</span></h4>
+                <ul>
+                  <li>
+                    <i class="bi bi-check"></i> Quam adipiscing vitae proin
+                  </li>
+                  <li><i class="bi bi-check"></i> Nec feugiat nisl pretium</li>
+                  <li>
+                    <i class="bi bi-check"></i> Nulla at volutpat diam uteera
+                  </li>
+                  <li>
+                    <i class="bi bi-check"></i> Pharetra massa massa ultricies
+                  </li>
+                  <li>
+                    <i class="bi bi-check"></i> Massa ultricies mi quis
+                    hendrerit
+                  </li>
+                </ul>
+                <div class="text-center">
+                  <a href="#" class="buy-btn">Buy Now</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="pricing-item">
+                <h3>Developer Plan</h3>
+                <div class="icon">
+                  <i class="bi bi-send"></i>
+                </div>
+                <h4><sup>$</sup>49<span> / month</span></h4>
+                <ul>
+                  <li>
+                    <i class="bi bi-check"></i> Quam adipiscing vitae proin
+                  </li>
+                  <li><i class="bi bi-check"></i> Nec feugiat nisl pretium</li>
+                  <li>
+                    <i class="bi bi-check"></i> Nulla at volutpat diam uteera
+                  </li>
+                  <li>
+                    <i class="bi bi-check"></i> Pharetra massa massa ultricies
+                  </li>
+                  <li>
+                    <i class="bi bi-check"></i> Massa ultricies mi quis
+                    hendrerit
+                  </li>
+                </ul>
+                <div class="text-center">
+                  <a href="#" class="buy-btn">Buy Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Pricing Section -->
+
+      <!-- FAQ Section -->
+      <section id="faq" class="faq section">
+        <div class="container">
+          <div class="row gy-4">
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="content px-xl-5">
+                <h3>
+                  <span>Frequently Asked </span><strong>Questions</strong>
+                </h3>
+                <p>
+                  Here are some of the frequently asked questions that our users
+                  have and the solutions for them.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+              <div class="faq-container">
+                <div class="faq-item faq-active">
+                  <h3>
+                    <span class="num">1.</span>
+                    <span> What is GreenFlow</span>
+                  </h3>
+                  <div class="faq-content">
+                    <p>
+                      GreenFlow is a smart irrigation platform that uses IoT
+                      devices and real-time environmental data to automate and
+                      optimize the watering of crops and plants. The system
+                      ensures water is delivered only when needed, based on soil
+                      moisture levels and weather conditions.
+                    </p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div>
+                <!-- End Faq item-->
+
+                <div class="faq-item">
+                  <h3>
+                    <span class="num">2.</span>
+                    <span> Can I use this system for my home garden?</span>
+                  </h3>
+                  <div class="faq-content">
+                    <p>
+                      Absolutely! GreenFlow is designed for scalability, meaning
+                      it can be used for both small gardens and large-scale
+                      agricultural fields. The system is customizable to fit
+                      your needs, whether you're a home gardener or a farmer.
+                    </p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div>
+                <!-- End Faq item-->
+
+                <div class="faq-item">
+                  <h3>
+                    <span class="num">3.</span>
+                    <span
+                      >Is your platform suitable for commercial
+                      agriculture?</span
+                    >
+                  </h3>
+                  <div class="faq-content">
+                    <p>
+                      Yes, our platform is designed to scale up for larger
+                      agricultural operations. It can handle multiple zones,
+                      large areas of land, and complex watering schedules. With
+                      its intelligent automation, it’s a great solution for
+                      commercial farms aiming to conserve water and boost
+                      efficiency.
+                    </p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div>
+                <!-- End Faq item-->
+
+                <div class="faq-item">
+                  <h3>
+                    <span class="num">4.</span>
+                    <span>How can this system help me save water?</span>
+                  </h3>
+                  <div class="faq-content">
+                    <p>
+                      By using soil moisture sensors and weather forecasts,
+                      GreenFlow prevents overwatering by delivering just the
+                      right amount of water. This reduces water waste and
+                      supports sustainable farming practices.
+                    </p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div>
+                <!-- End Faq item-->
+
+                <div class="faq-item">
+                  <h3>
+                    <span class="num">5.</span>
+                    <span>Can I control the system remotely?</span>
+                  </h3>
+                  <div class="faq-content">
+                    <p>
+                      Yes, you can monitor and control the irrigation system
+                      from anywhere through our website interface. You'll
+                      receive real-time updates and have the ability to adjust
+                      settings remotely, ensuring your plants are always well
+                      taken care of.
+                    </p>
+                  </div>
+                  <i class="faq-toggle bi bi-chevron-right"></i>
+                </div>
+                <!-- End Faq item-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /FAQ Section -->
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Contact</h2>
+          <p>
+            Contact us for any help and support. We are always here for you.
+          </p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row gx-lg-0 gy-4">
+            <div class="col-lg-4">
+              <div
+                class="info-container d-flex flex-column align-items-center justify-content-center"
+              >
+                <div
+                  class="info-item d-flex"
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                >
+                  <i class="bi bi-geo-alt flex-shrink-0"></i>
+                  <div>
+                    <h3>Address</h3>
+                    <p>New Delhi, India</p>
+                  </div>
+                </div>
+                <!-- End Info Item -->
+
+                <div
+                  class="info-item d-flex"
+                  data-aos="fade-up"
+                  data-aos-delay="300"
+                >
+                  <i class="bi bi-telephone flex-shrink-0"></i>
+                  <div>
+                    <h3>Call Us</h3>
+                    <p>+91 9111111111</p>
+                  </div>
+                </div>
+                <!-- End Info Item -->
+
+                <div
+                  class="info-item d-flex"
+                  data-aos="fade-up"
+                  data-aos-delay="400"
+                >
+                  <i class="bi bi-envelope flex-shrink-0"></i>
+                  <div>
+                    <h3>Email Us</h3>
+                    <p>greenflow@gmail.com</p>
+                  </div>
+                </div>
+                <!-- End Info Item -->
+              </div>
+            </div>
+
+            <div class="col-lg-8">
+              <form
+                action="forms/contact.php"
+                method="post"
+                class="php-email-form"
+                data-aos="fade"
+                data-aos-delay="100"
+              >
+                <div class="row gy-4">
+                  <div class="col-md-6">
+                    <input
+                      type="text"
+                      name="name"
+                      class="form-control"
+                      placeholder="Your Name"
+                      required
+                    />
+                  </div>
+
+                  <div class="col-md-6">
+                    <input
+                      type="email"
+                      class="form-control"
+                      name="email"
+                      placeholder="Your Email"
+                      required
+                    />
+                  </div>
+
+                  <div class="col-md-12">
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="subject"
+                      placeholder="Subject"
+                      required
+                    />
+                  </div>
+
+                  <div class="col-md-12">
+                    <textarea
+                      class="form-control"
+                      name="message"
+                      rows="8"
+                      placeholder="Message"
+                      required
+                    ></textarea>
+                  </div>
+
+                  <div class="col-md-12 text-center">
+                    <div class="loading">Loading</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">
+                      Your message has been sent. Thank you!
+                    </div>
+
+                    <button type="submit">Send Message</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!-- End Contact Form -->
+          </div>
+        </div>
+      </section>
+      <!-- /Contact Section -->
+    </main>
+
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/php-email-form/validate.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/aos/aos.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/glightbox/js/glightbox.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/swiper/swiper-bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/purecounter/purecounter_vanilla.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/imagesloaded/imagesloaded.pkgd.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+
+    <!-- Main JS File -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  </body>
+</html>
